@@ -6,7 +6,8 @@ import java.nio.file.Paths;
 import java.util.*;
 
 public class Day3 {
-
+    //part 2 answer 89471771
+    //part 1 answer 556367
     public static void main(String[] args) {
         String filePath = "C:/Users/chang-kiat.foo/Desktop/TEST/src/main/resources/day3InputValue.txt"; // Replace with the actual file path
         try {
