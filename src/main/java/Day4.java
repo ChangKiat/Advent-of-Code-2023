@@ -12,11 +12,6 @@ public class Day4 {
         try {
             String input = readFile(filePath);
             String[] inputArray = input.split("\n");
-            int instances =1;
-
-
-
-
             System.out.println("Total point Part 1: "+ part1Solution(inputArray));
             System.out.println("Total point Part 2: "+ part2Solution(inputArray));
 
@@ -26,7 +21,7 @@ public class Day4 {
     }
 
     private static int part2Solution(String[] inputArray){
-        int totalinstances = 0;
+        int totalInstances = 0;
         int[] newArray = new int[inputArray.length+100];
 
         for(int k =0 ; k< inputArray.length;k++){
@@ -37,8 +32,6 @@ public class Day4 {
             inputArray[k] = inputArray[k].substring(colonIndex + 2);
 
             String[] gameString =  inputArray[k].split("\\| ");
-            int point = 0;
-
             String[] game1 = gameString[0].trim().split("\\s+");
             String[] game2 = gameString[1].trim().split("\\s+");
             for(int i =0 ; i< game1.length  ;i++){
@@ -48,20 +41,16 @@ public class Day4 {
                     }
                 }
             }
-
             for (int i = 0; i < newArray[k]; i++) {
                 for (int h = 1; h < instances + 1; h++) {
                     newArray[k + h]++;
                 }
             }
-
         }
         for (int number : newArray) {
-            totalinstances += number;
+            totalInstances += number;
         }
-
-
-        return totalinstances;
+        return totalInstances;
     }
 
     private static int part1Solution(String[] inputArray){
